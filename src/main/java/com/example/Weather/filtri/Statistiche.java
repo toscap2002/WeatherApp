@@ -1,18 +1,23 @@
 package com.example.Weather.filtri;
 
-import com.example.Weather.model.Lista;
+import com.example.Weather.model.Main;
 
 public class Statistiche {
-    private boolean b;
-    private Lista list;
+    private Main main;
 
-    public Statistiche(boolean b){
-        this.b = b;
+    public Statistiche(){
+        super();
     }
 
-    public boolean b(){
-        return b;
+    public Statistiche(Main main){
+        this.main = main;
     }
 
 
+    @Override
+    public String toString() {
+        return "Statistiche{" +
+                main +
+                '}';
+    }
 }

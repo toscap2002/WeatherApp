@@ -6,9 +6,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
-import java.io.*;
-import java.text.SimpleDateFormat;
-import java.time.DayOfWeek;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
@@ -18,7 +19,6 @@ public class CityServiceImpl implements CityService {
 
     @Autowired
     private RestTemplate restTemplate;
-    //private City city;
 
     @Autowired
     public void ServiceJson(RestTemplate restTemplate) {
@@ -132,37 +132,6 @@ public class CityServiceImpl implements CityService {
             }
         }, 0, 1, TimeUnit.DAYS);
         return "The file is saved in: " + path;
-    }
-
-
-
-    @Override  //previsioni meteo
-    public String forecast() throws Exception{
-        City city = new City();
-
-       // JSONObject obj = (City) apifivedays();
-
-
-        CityServiceImpl servicejson = new CityServiceImpl();
-
-     //   obj = city.apifivedays();
-
-        SimpleDateFormat data = new SimpleDateFormat("yyyy-mm-dd");
-        String today = data.format(new DayOfWeek[0]);
-
-        String file = " " + today;
-
-        String path = System.getProperty("user.dir") + file + ".txt";
-
-        try{
-            PrintWriter fileo = new PrintWriter(new BufferedWriter((new FileWriter(path))));
-
-            fileo.println(toString());
-            fileo.close();
-        }catch (Exception e){
-            System.out.println("Error: " + e);
-        }
-        return path;
     }
 
 

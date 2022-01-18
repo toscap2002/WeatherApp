@@ -64,7 +64,7 @@ public class Weather {
     @Override
     public String toString(){
 
-        return"Id: " + id +", main: " + main;
+        return"Id: " + id +", \nmain: " + main;
     }
 
 }

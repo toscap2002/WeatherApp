@@ -6,15 +6,17 @@ public class Main {
     private double temp_max;
     private double temp_min;
     private double temp_avg;
+    private double variance;
 
     public Main(){}
 
-   public Main(double temp, double feels_like, double temp_max, double temp_min, double temp_avg) {
+   public Main(double temp, double feels_like, double temp_max, double temp_min, double temp_avg, double variance) {
         this.temp = temp;
         this.feels_like = feels_like;
         this.temp_max = temp_max;
         this.temp_min = temp_min;
         this.temp_avg = temp_avg;
+        this.variance = variance;
     }
 
 
@@ -54,10 +56,25 @@ public class Main {
         this.temp_avg = (temp_max+temp_min)/2;
     }
 
+    public double getVariance() {
+        return (Math.pow(temp+temp_max+temp_min, 2))/3;
+    }
+
+    public void setVariance(double variance) {
+        this.variance = (Math.pow(temp+temp_max+temp_min, 2))/3;
+    }
+
     @Override
     public String toString(){
 
-        return "\nTemperature: " + temp + "\ntemp_max: " + temp_max + "K" + "\ntemp_min: " + temp_min + "K" + "\ntemp_avg: " + ((temp_max+temp_min)/2) + "K";
+        return "\nTemperature{ " +
+                "temp: " + temp + "k" +
+                "feels_like: " + feels_like +
+                "temp_max: " + temp_max + "k" +
+                "temp_min: " + temp_min + "k" +
+                "temp_avg: " + temp_avg + "k" +
+                "temp_var: " + variance + "k" +
+                "}";
     }
 
 }

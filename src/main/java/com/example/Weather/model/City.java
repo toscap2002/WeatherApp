@@ -12,6 +12,7 @@ in saveHour devo fare due metodi ce richiamo così sono un po' diversi, va bene 
 forse po devo collegare quello Historical per fare la differenza
  */
     private Vector<Weather> weather = new Vector<Weather>();
+    private String name;
     private Main main;
     private String dt_txt;
 
@@ -23,6 +24,14 @@ forse po devo collegare quello Historical per fare la differenza
 
     public City(Main main){
         this.main = main;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getDt_txt(){
@@ -119,7 +128,7 @@ forse po devo collegare quello Historical per fare la differenza
 
     @Override
     public String toString(){
-        return "Main " + main + "weather " + weather;
+        return "Main{ " + main + "\n}weather: " + weather;
     }
 
 

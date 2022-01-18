@@ -13,7 +13,7 @@ public interface CityService {
     //poi mi manca l'errore tra reale e forecast
     public abstract Object saveHour();
     public abstract Object saveDay();
-    public abstract String forecast() throws Exception;
+    //public abstract String forecast() throws Exception;
     public abstract Lista apifivedays();
     public abstract String parse(String url);
     public abstract void ServiceJson(RestTemplate restTemplate);
