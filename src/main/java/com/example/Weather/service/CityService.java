@@ -9,8 +9,10 @@ import org.springframework.web.client.RestTemplate;
 public interface CityService {
 
 
-    // e vedo se fare almeno uno per tre giorni (se è facile)
-    //poi mi manca l'errore tra reale e forecast
+    /**
+     * e vedo se fare almeno uno per tre giorni (se è facile)
+     * poi mi manca l'errore tra reale e forecast
+     */
     public abstract Object saveHour();
     public abstract Object saveDay();
     //public abstract String forecast() throws Exception;

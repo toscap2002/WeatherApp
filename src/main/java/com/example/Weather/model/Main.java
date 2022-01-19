@@ -1,6 +1,6 @@
 package com.example.Weather.model;
 
-public class Main {
+public class Main  {
     private double temp;
     private double feels_like;
     private double temp_max;
@@ -68,12 +68,12 @@ public class Main {
     public String toString(){
 
         return "\nTemperature{ " +
-                "temp: " + temp + "k" +
-                "feels_like: " + feels_like +
-                "temp_max: " + temp_max + "k" +
-                "temp_min: " + temp_min + "k" +
-                "temp_avg: " + temp_avg + "k" +
-                "temp_var: " + variance + "k" +
+                "\ntemp: " + temp + "k" +
+                "\n feels_like: " + feels_like +
+                "\n temp_max: " + temp_max + "k" +
+                "\n temp_min: " + temp_min + "k" +
+                "\n temp_avg: " + temp_avg + "k" +
+                "\n temp_var: " + variance + "k" +
                 "}";
     }
 

@@ -5,6 +5,7 @@ import com.example.Weather.filtri.StatisticheDiff;
 import com.example.Weather.model.City;
 import com.example.Weather.model.Lista;
 import com.example.Weather.service.CityService;
+import com.fasterxml.jackson.core.JsonProcessingException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,14 +16,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class CityController {
 
     CityService cityService;
-    StatisticheDiff statisticheS ;
 
     @Autowired
     public CityController(CityService cityService) {
         this.cityService = cityService;
     }
 
-    @GetMapping( "/city/{name}")
+    @GetMapping( "/city")
     public ResponseEntity<City> getCity(){
         return new ResponseEntity<>(cityService.consumingApi(), HttpStatus.OK);
     }
@@ -43,11 +43,12 @@ public class CityController {
     }
 
     @GetMapping("/statistics")
-    public ResponseEntity<String> getStatistics(){
+    public ResponseEntity<String> getStatistics() throws JsonProcessingException {
+        StatisticheDiff statisticheS = new StatisticheDiff();
         String difference = null;
         try{
             difference = statisticheS.compareStatic();
-        }catch (NotFoundException e){
+        }catch (NotFoundException | JsonProcessingException e){
             throw new NotFoundException();
         }
 

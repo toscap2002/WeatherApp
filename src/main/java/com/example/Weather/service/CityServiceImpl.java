@@ -117,9 +117,6 @@ public class CityServiceImpl implements CityService {
                 Lista city = apifivedays();
 
                 try{
-                    if(!file_d.exists()){
-                        file_d.createNewFile();
-                    }
                     FileWriter fileWriter = new FileWriter(file_d, true);
                     BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
                     bufferedWriter.write(city.toString());

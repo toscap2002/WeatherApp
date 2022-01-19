@@ -2,7 +2,7 @@ package com.example.Weather.model;
 
 import java.util.Vector;
 
-public class Lista extends City {
+public class Lista  {
 
     private Vector<City> city = new Vector<>();
 
