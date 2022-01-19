@@ -2,20 +2,31 @@ package com.example.Weather.model;
 
 import java.util.Vector;
 
+/**
+ * @author Pierro e Pelliccia
+ */
+
+
+/**
+ *
+ */
 public class Lista  {
 
     private Vector<City> city = new Vector<>();
 
     public Lista(){
         super();
-
     }
 
-    public Vector<City> getList() {
-        return city;
+    public City getCity(int index) {
+        return city.get(index);
     }
     public void setList(Vector<City> city) {
         this.city = city;
+    }
+
+    public int getNumeroCitta() {
+        return this.city.size();
     }
 
     @Override

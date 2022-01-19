@@ -42,7 +42,7 @@ forse po devo collegare quello Historical per fare la differenza
         this.dt_txt = dt_txt;
     }
 
-    public Object getMain() {
+    public Main getMain() {
         return main;
     }
     public void setMain(Main main) {
@@ -130,7 +130,6 @@ forse po devo collegare quello Historical per fare la differenza
     public String toString(){
         return "Main{ " + main + "\n}weather: " + weather;
     }
-
 
 
 }

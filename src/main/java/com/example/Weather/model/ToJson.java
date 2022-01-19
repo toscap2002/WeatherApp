@@ -10,7 +10,6 @@ public class ToJson extends Weather {
      public JSONObject toJson(String name) throws JSONException {
 
 
-
         JSONObject weather = new JSONObject();
 
         JSONObject main = new JSONObject();
