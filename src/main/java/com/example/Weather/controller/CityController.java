@@ -28,7 +28,7 @@ public class CityController {
     }
 
     /**
-     * Questa rotta di GET ci mostra le informazioni del meteo corrente di Ancona
+     * Questa rotta di GET ritorna le informazioni del meteo corrente di Ancona
      */
     @GetMapping( "/city")
     public ResponseEntity<City> getCity(){
@@ -36,7 +36,7 @@ public class CityController {
     }
 
     /**
-     * Questa rotta di GET ci mostra le informazioni delle previsioni meteo di Ancona
+     * Questa rotta di GET ritona le informazioni delle previsioni meteo di Ancona
      */
     @GetMapping("/forecast")
     public ResponseEntity<Lista> getCityForecast(){
@@ -52,7 +52,7 @@ public class CityController {
     }
 
     /**
-     *Questa rotta di GET ci mostra le statistiche riguardanti temperature massima, minima, media e varianza
+     *Questa rotta di GET ritorna le statistiche riguardanti temperature massima, minima, media e varianza
      */
     @GetMapping("/statistics")
     public ResponseEntity<JSONObject> getStatistics(){
@@ -63,7 +63,7 @@ public class CityController {
     }
 
     /**
-     *Questa rotta di GET di da l'errore tra le temperature reali e le previsioni
+     *Questa rotta di GET ritorna l'errore tra le temperature reali e le previsioni
      */
     @GetMapping("/error")
     public ResponseEntity<JSONObject> getError(){
