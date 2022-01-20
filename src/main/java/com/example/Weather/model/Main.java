@@ -1,5 +1,10 @@
 package com.example.Weather.model;
 
+/**
+ * Questo metodo descrive tutte le temperature del meteo
+ * @author Pierro e Pelliccia
+ */
+
 public class Main  {
     private double temp;
     private double feels_like;

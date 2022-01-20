@@ -5,6 +5,10 @@ import com.example.Weather.model.Lista;
 import com.example.Weather.model.Main;
 import net.minidev.json.JSONObject;
 
+/**
+ * @author Pierro e Pelliccia
+ */
+
 public class Statistiche {
     private double temp_max = 0;
     private double temp_min = 0;
@@ -12,6 +16,10 @@ public class Statistiche {
     private double variance = 0;
 
 
+    /**
+     * Questo metodo restituisce il JSONObject delle statistiche
+     * @return il JSONObject rappresenta le temperature
+     */
     public JSONObject toJson(){
         JSONObject temp = new JSONObject();
         temp.put("temp_max", temp_max);
@@ -22,6 +30,10 @@ public class Statistiche {
         return temp;
     }
 
+    /**
+     * Questo metodo calcola le statistiche riguardanti le temperature massime, minime, media e varianza
+     * @param lista
+     */
     public void CalcoloStatistiche(Lista lista){
         double temp_max = 0;
         double temp_min = 0;

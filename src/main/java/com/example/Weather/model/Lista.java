@@ -3,13 +3,10 @@ package com.example.Weather.model;
 import java.util.Vector;
 
 /**
+ * Questa classe descrive tutte le proprietà delle previsioni meteo di una città
  * @author Pierro e Pelliccia
  */
 
-
-/**
- *
- */
 public class Lista  {
 
     private Vector<City> city = new Vector<>();

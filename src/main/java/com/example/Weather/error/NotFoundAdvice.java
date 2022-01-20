@@ -6,6 +6,10 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
+/**
+ * @author Pierro e Pelliccia
+ */
+
 @ControllerAdvice
 public class NotFoundAdvice {
     @ResponseBody

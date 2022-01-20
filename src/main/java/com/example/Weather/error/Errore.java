@@ -5,6 +5,10 @@ import com.example.Weather.model.Lista;
 import com.example.Weather.model.Main;
 import net.minidev.json.JSONObject;
 
+/**
+ * @author Pierro e Pelliccia
+ */
+
 public class Errore {
     private double temp_attuale;
     private double temp_forecast;
@@ -16,6 +20,11 @@ public class Errore {
         this.differenza = 0;
     }
 
+    /**
+     * Questo è il metodi che calcola l'errore tra le temperature attuali e le previsioni
+     * @param current è il parametro indica le temperature attuali
+     * @param forecast è il parametro che indica le temperature delle previsioni
+     */
     public void calcolaSogliaErrore(City current, Lista forecast){
         // ottengo la temperatura dalla current...
         Main main_current = current.getMain();
@@ -33,6 +42,10 @@ public class Errore {
         }
     }
 
+    /**
+     * Il metodo restituisce il JSONObject dell'errore
+     * @return JSONObject delle temperature
+     */
     public JSONObject toJson(){
         JSONObject j = new JSONObject();
         j.put("temp_attuale", temp_attuale);
