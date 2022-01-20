@@ -6,6 +6,7 @@ import org.springframework.web.client.RestTemplate;
 
 /**
  * @author Pierro e Pelliccia
+ * Definisce il RestTemplete @bean che viene @autowired
  */
 
 @Configuration

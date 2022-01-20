@@ -31,6 +31,10 @@ public class CityServiceImpl implements CityService {
     }
 
 
+    /**
+     * Questo metodo chiama l'API per che restituisce il meteo corrente
+     * @return meteo corrente
+     */
     @Override
     public City consumingApi() {
         String url = "https://api.openweathermap.org/data/2.5/weather?q=ancona&appid=";
@@ -38,6 +42,10 @@ public class CityServiceImpl implements CityService {
         return restTemplate.getForObject(url+api, City.class);
     }
 
+    /**
+     * Questo metodo chiama l'API che restituisce le previsioni meteo per i prossimi 5 giorni
+     * @return previsioni meteo
+     */
     @Override
     public Lista apifivedays(){
         String url = "http://api.openweathermap.org/data/2.5/forecast?q=ancona&appid=";
@@ -46,6 +54,10 @@ public class CityServiceImpl implements CityService {
         return restTemplate.getForObject(url+api_key, Lista.class);
     }
 
+    /**
+     * Questo meteo salva ogni ora le caratteriscihe rigurdanti le temperature e il meteo
+     * @return le temperature del meteo ogni 3 ore
+     */
     @Override  //salva ogni ora
     public Object saveHour(){
     String path = System.getProperty("user.dir") + "HourlyReport.txt";
