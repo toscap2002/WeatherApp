@@ -5,7 +5,7 @@ import org.json.JSONObject;
 /**
  * Questo metodo descrive tutte le temperature del meteo
  *
- * @author Pierro e Pelliccia
+ * @author Pierro 
  */
 
 public class Main {
