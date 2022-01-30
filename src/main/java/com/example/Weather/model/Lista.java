@@ -7,7 +7,7 @@ import java.util.Vector;
 
 /**
  * Questa classe descrive tutte le proprietà delle previsioni meteo di una città
- * @author Pierro e Pelliccia
+ * @author Pierro 
  */
 
 public class Lista  {
