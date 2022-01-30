@@ -10,6 +10,11 @@ import java.time.ZoneId;
 import java.util.Date;
 import java.util.Vector;
 
+/**
+ * @author Pierro
+ */
+
+
 public class DaysFilter implements FilterTemplate{
 
     /**
