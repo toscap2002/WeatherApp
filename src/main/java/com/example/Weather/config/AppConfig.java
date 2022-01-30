@@ -5,7 +5,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.client.RestTemplate;
 
 /**
- * @author Pierro e Pelliccia
+ * @author Pierro
  * Definisce il RestTemplete @bean che viene @autowired
  */
 
