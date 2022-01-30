@@ -16,7 +16,7 @@
 Questo server viene avviato dalla porta 8080, (localhost:8080). Aggiungendo poi le varie richieste per chiedere le informazioni che si desiderano.
 
 | N° | TIPO RICHIESTA | VALORE | DESCRIZIONE|
-| ------------------------------------------|
+| ---|----------------|--------|------------|
 | 1 | GET | /city | Questa chiamata ottiene il meteo corrente di Ancona |
 | 2 | GET | /forecast | Questa chiamata restituisce le previsioni meteo dei prossimi 5 giorni ad Ancona |
 | 3 | GET | /saveEveryHour | Questa chiamata salva ogni ora le informazioni sulle temperature attuali |
