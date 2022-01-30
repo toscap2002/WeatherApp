@@ -16,6 +16,11 @@ import org.slf4j.LoggerFactory;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
+/**
+ * @author Pierro
+ */
+
+
 @Component
 public class ScheduledTasks {
     private String path = "HourlyReport.json";
