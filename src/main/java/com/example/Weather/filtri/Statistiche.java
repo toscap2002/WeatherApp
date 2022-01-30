@@ -6,7 +6,7 @@ import com.example.Weather.model.Main;
 import org.json.JSONObject;
 
 /**
- * @author Pierro e Pelliccia
+ * @author Pierro 
  */
 
 public class Statistiche {
