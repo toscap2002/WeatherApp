@@ -11,7 +11,7 @@ import java.util.Vector;
 /**
  * Questa è la classe che descrive le caratteristiche del meteo corrente di una città
  *
- * @author Pierro e Pelliccia
+ * @author Pierro 
  */
 
 public class City {
