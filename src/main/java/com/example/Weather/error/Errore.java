@@ -3,7 +3,8 @@ package com.example.Weather.error;
 import com.example.Weather.model.City;
 import com.example.Weather.model.Lista;
 import com.example.Weather.model.Main;
-import net.minidev.json.JSONObject;
+import org.json.JSONObject;
+
 
 /**
  * @author Pierro e Pelliccia

@@ -1,29 +1,32 @@
 package com.example.Weather.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerializer;
+import org.json.JSONObject;
 
+import java.time.LocalDateTime;
+import java.util.Date;
 import java.util.Vector;
 
 /**
  * Questa è la classe che descrive le caratteristiche del meteo corrente di una città
+ *
  * @author Pierro e Pelliccia
  */
 
-@JsonIgnoreProperties(ignoreUnknown = true)
-public  class City {
+public class City {
 
-    private Vector<Weather> weather = new Vector<Weather>();
     private String name;
     private Main main;
-    private String dt_txt;
+    private long dt;
 
-    public City(){
-        super();
+    public City() {
         this.main = null;
+
     }
 
 
-    public City(Main main){
+    public City(Main main) {
         this.main = main;
     }
 
@@ -35,32 +38,28 @@ public  class City {
         this.name = name;
     }
 
-    public String getDt_txt(){
-        return dt_txt;
+    public Date getdt() {
+        return new Date(this.dt * 1000);
     }
 
-    public void setDt_txt(String dt_txt) {
-        this.dt_txt = dt_txt;
+    public void setdt(long dt) {
+        this.dt = dt;
     }
 
     public Main getMain() {
         return main;
     }
+
     public void setMain(Main main) {
         this.main = main;
     }
 
-    public Vector<Weather> getWeather() {
-        return weather;
+    public JSONObject exportJson() {
+        JSONObject res = new JSONObject();
+        res.put("name", this.name);
+        res.put("temperature", this.main.exportJSON());
+        res.put("dt", this.dt);
+        return res;
     }
-    public void setWeather(Vector<Weather> weather) {
-        this.weather = weather;
-    }
-
-    @Override
-    public String toString(){
-        return "Main{ " + main + "\n}weather: " + weather;
-    }
-
 
 }
