@@ -2,7 +2,7 @@ package com.example.Weather.model;
 
 /**
  * Questa classe indica il main e l'id di una città
- * @author Pierro e Pelliccia
+ * @author Pierro 
  */
 
 public class Weather {
