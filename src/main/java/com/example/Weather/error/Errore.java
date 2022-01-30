@@ -7,7 +7,7 @@ import org.json.JSONObject;
 
 
 /**
- * @author Pierro e Pelliccia
+ * @author Pierro 
  */
 
 public class Errore {
