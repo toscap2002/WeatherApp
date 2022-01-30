@@ -13,7 +13,9 @@
 * In fine il servizio calcolerà la soglia di errore tra le previsioni meteo e il meteo attuale.
 
 ## Rotte
-Questo server viene avviato dalla porta 8080, (localhost:8080). Aggiungendo poi le varie richieste per chiedere le informazioni che si desiderano.
+Questo server viene avviato dalla porta 80, (localhost:80). Aggiungendo poi le varie richieste per chiedere le informazioni che si desiderano.
+
+
 
 | N° | TIPO RICHIESTA | VALORE | DESCRIZIONE|
 | ---|----------------|--------|------------|
@@ -22,6 +24,7 @@ Questo server viene avviato dalla porta 8080, (localhost:8080). Aggiungendo poi 
 | 3 | GET | /saveEveryHour | Questa chiamata salva ogni ora le informazioni sulle temperature attuali |
 | 4 | GET | /statistic | Questa chiamata ritorna le statistice delle temperature |
 | 5 | GET | /error | Questa chiamata restituisce l'errore tra le temperature attuali e le previsioni|
+| 6 | POST | /filter | Questa chiamata permette recuperare dal file o dalle api del forecast il meteo della città e poi filtra la lista in base ai parametri inseriti nel json di input|
 
 ## Funzionamento
 ### 1. /city
@@ -42,14 +45,24 @@ La quarta rotta riporta un JSONObject contenente le statistiche riguardanti le t
 
 ### 5. /error
 -------------
-L'ultima rotta riporta l'errore tra le temperature attuali e le previsioni, restituendo la differenza di temperature tra le due.
+La quinta rotta riporta l'errore tra le temperature attuali e le previsioni, restituendo la differenza di temperature tra le due.
+
+### 6. /filter
+-------------
+L'ultima rotta riceve in input un json tramite il body della richiesta in POST e filtra le informazioni in base ai parametri inseriti in quest'ultimo.
+
+
+## Strumenti utilizzati
+* IntelliJ IDE
+* Postman
+* OpenWeatherMap Api
+* MarkDown Monster
 
 
 
 ## Autori
 Progetto realizzato da:
 * Tosca Pierro
-
 
 
 
